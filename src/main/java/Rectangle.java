@@ -10,8 +10,28 @@
  */
 public class Rectangle {
     
-    public double length;
+    private double length;
     private double width;
+     
+    public Rectangle(double len, double wid) {
+        if (len <= 0 || wid <=0) {
+            // this is an error
+        }
+        
+        this.length = len;
+        this.width = wid;
+    }
+    
+    public Rectangle(double lenAndWid) {
+        this.length = lenAndWid;
+        this.width = lenAndWid;
+    }
+    
+    public Rectangle() {
+        this.length = 1;
+        this.width = 1;
+    }
+    
     
     public void setLength(double len) {
         this.length = len;
@@ -30,6 +50,8 @@ public class Rectangle {
     }
     
     public double getArea() {
-        return this.length * this.width;
+        double area = this.length * this.width;
+        
+        return area;
     }
 }
